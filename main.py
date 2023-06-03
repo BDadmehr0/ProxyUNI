@@ -30,12 +30,11 @@ if __name__ == "__main__":
             proxies = response.text.split('\n')
 
             proxy = proxies[start]  # یک پروکسی را انتخاب کنید
-            print(C.BLUE, proxy)
+            print(counter,C.BLUE, proxy)
             start += 1
             counter += 1  # افزایش شمارنده
 
             if counter == range_i:  # بررسی اگر شمارنده برابر با تعداد مورد نظر بشود
-                print(C.YELLOW+'Proxy termination')
                 break 
 
     else:
