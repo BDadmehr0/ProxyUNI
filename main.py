@@ -6,7 +6,7 @@ os.system('clear')
 end = 2057
 start = 366
 
-counter = 0  # متغیر شمارنده
+counter = 0 
 data = {
     'UrlBox': 'https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all',
     'AgentList': 'Internet+Explorer',
@@ -29,12 +29,12 @@ if __name__ == "__main__":
             response = requests.post('https://www.httpdebugger.com/tools/ViewHttpHeaders.aspx', json=data)
             proxies = response.text.split('\n')
 
-            proxy = proxies[start]  # یک پروکسی را انتخاب کنید
+            proxy = proxies[start]
             print(counter,C.BLUE, proxy,C.WHITE)
             start += 1
-            counter += 1  # افزایش شمارنده
+            counter += 1
 
-            if counter == range_i:  # بررسی اگر شمارنده برابر با تعداد مورد نظر بشود
+            if counter == range_i: 
                 break 
 
     else:
