@@ -30,7 +30,7 @@ if __name__ == "__main__":
             proxies = response.text.split('\n')
 
             proxy = proxies[start]  # یک پروکسی را انتخاب کنید
-            print(counter,C.BLUE, proxy)
+            print(counter,C.BLUE, proxy,C.WHITE)
             start += 1
             counter += 1  # افزایش شمارنده
 
