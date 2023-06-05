@@ -47,7 +47,11 @@ if __name__ == "__main__":
             except requests.exceptions.ConnectionError:
                 print('requests.exceptions.ConnectionError: Check Your intetnet an try again')
     elif rage_i == 00:
-        help()
+        print('command      about')
+        print('11           Show Your public IP')
+        print('12           Clear Terminal')
+        print('13           Quit')
+
     elif range_i == 11:
         response = requests.get(url)
         data = response.json()
