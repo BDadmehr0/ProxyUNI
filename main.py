@@ -4,7 +4,8 @@ from colorama import Fore as C
 
 end = 2057
 start = 366
-
+url = 'https://api.ipify.org?format=json'
+    
 counter = 0 
 data = {
     'UrlBox': 'https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all',
@@ -38,6 +39,11 @@ if __name__ == "__main__":
                     break
             except requests.exceptions.ConnectionError:
                 print('requests.exceptions.ConnectionError: Check Your intetnet an try again')
+    elif rage_i == 1:
+        response = requests.get(url)
+        data = response.json()
 
+        ip_address = data['ip']
+        print(ip_address)
     else:
         print(C.RED+'Proxy Limit(2057): This amount of proxy is not available')
