@@ -54,6 +54,9 @@ if __name__ == "__main__":
 
         ip_address = data['ip']
         print(ip_address)
-    elif range_i
+    elif range_i == 12:
+        os.system('clear')
+    elif range_i == 13:
+        exit()
     else:
         print(C.RED+'Proxy Limit(2057): This amount of proxy is not available')
