@@ -16,10 +16,17 @@ data = {
 
 def Banner():
     print('  ___                  _   _ _  _ ___  ')
-    print(' | _ \_ _ _____ ___  _| | | | \| |_ _| ')
+    print(' | _ \_ _ _____ ___  _| | | | \| |_ _| '+C.CYAN+'help: 00',C.WHITE)
     print(" |  _/ '_/ _ \ \ / || | |_| | .` || |  "+C.CYAN+'Github BDadmehr0',C.WHITE)
     print(' |_| |_| \___/_\_\\_,  |\___/|_|\_|___| '+C.CYAN+'Infinite proxy program has 1597 proxies',C.WHITE)
     print('                  |__/                 V1.0.0\n',C.WHITE)
+
+def help():
+    print('command      about')
+    print('11           Show Your public IP')
+    print('12           Clear Terminal')
+    print('13           Quit')
+
 
 if __name__ == "__main__":
     Banner()
@@ -39,11 +46,14 @@ if __name__ == "__main__":
                     break
             except requests.exceptions.ConnectionError:
                 print('requests.exceptions.ConnectionError: Check Your intetnet an try again')
-    elif rage_i == 1:
+    elif rage_i == 00:
+        help()
+    elif range_i == 11:
         response = requests.get(url)
         data = response.json()
 
         ip_address = data['ip']
         print(ip_address)
+    elif range_i
     else:
         print(C.RED+'Proxy Limit(2057): This amount of proxy is not available')
