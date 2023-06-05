@@ -15,13 +15,13 @@ data = {
 }
 
 def Banner():
-    v_response = requests.get('https://raw.githubusercontent.com/BDadmehr0/ProxyUNI/main/V').txt
+    v_response = requests.get('https://raw.githubusercontent.com/BDadmehr0/ProxyUNI/main/V').text
     v_response.split('\n')
     print('  ___                  _   _ _  _ ___  ')
     print(' | _ \_ _ _____ ___  _| | | | \| |_ _| '+C.CYAN+'help: 00',C.WHITE)
     print(" |  _/ '_/ _ \ \ / || | |_| | .` || |  "+C.CYAN+'Github BDadmehr0',C.WHITE)
     print(' |_| |_| \___/_\_\\_,  |\___/|_|\_|___| '+C.CYAN+'Infinite proxy program has 1597 proxies',C.WHITE)
-    print('                  |__/                 V{}\n',C.WHITE).format(v_response)
+    print('                  |__/                 V{}\n'.format(v_response),C.WHITE)
 
 def help():
     print('command      about')
