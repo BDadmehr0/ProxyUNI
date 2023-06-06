@@ -19,6 +19,6 @@ if range_i <= end:
 
         if counter == range_i:  # بررسی اگر شمارنده برابر با تعداد مورد نظر بشود
             print(C.YELLOW+'Proxy termination')
-            break```
-
+            break
+```
 Also, this program uses the `httpdebugger.com` service, because of the `proxyscrape.com` filter, we pass requests through this service so that we can reject the filter.
