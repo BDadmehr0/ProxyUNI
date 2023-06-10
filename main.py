@@ -22,17 +22,17 @@ def Banner():
     print('                  |__/                 V1.0.0\n',C.WHITE)
 
 def help():
-    print('command      about')
+    print(C.CYAN+'\ncommand      about\n')
     print('10           Start')
     print('11           Show Your public IP')
     print('12           Clear Terminal')
-    print('13           Quit')
+    print('13           Quit\n',C.WHITE)
 
 
 if __name__ == "__main__":
     Banner()
     while True:
-        qus_i = int(input('How many proxies do you want?(limit 2057) '))
+        qus_i = int(input('ProxyUNI-Command$: '))
         if qus_i == 10:
             range_i = int(input('How many proxies do you want?(limit 2057) '))
             if range_i <= end:
@@ -49,18 +49,23 @@ if __name__ == "__main__":
                         if counter == range_i: 
                             break
                     except requests.exceptions.ConnectionError:
-                        print('requests.exceptions.ConnectionError: Check Your intetnet an try again')
+                        print(C.YELLOW+'requests.exceptions.ConnectionError: Check Your intetnet an try again',C.WHITE)
+            else:
+                print(c.RED+'Not available this many Proxy',C.WHITE)
         elif qus_i == 00:
             help()
         elif qus_i == 11:
-            response = requests.get(url)
-            data = response.json()
+            try:
+                response = requests.get(url)
+                data = response.json()
 
-            ip_address = data['ip']
-            print(ip_address)
+                ip_address = data['ip']
+                print(ip_address)
+            except requests.exceptions.ConnectionError:
+                print(C.YELLOW+'requests.exceptions.ConnectionError: Check Your intetnet an try again',C.WHITE)
         elif qus_i == 12:
             os.system('clear')
         elif qus_i == 13:
             exit()
         else:
-            print(C.RED+'Proxy Limit(2057): This amount of proxy is not available')
+            print(C.RED+'Terminal: Command not available',C.WHITE)
