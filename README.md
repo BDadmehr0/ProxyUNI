@@ -12,12 +12,12 @@ if range_i <= end:
         response = requests.post('https://www.httpdebugger.com/tools/ViewHttpHeaders.aspx', json=data)
         proxies = response.text.split('\n')
 
-        proxy = proxies[start]  # یک پروکسی را انتخاب کنید
+        proxy = proxies[start]
         print(C.BLUE, proxy)
         start += 1
-        counter += 1  # افزایش شمارنده
+        counter += 1
 
-        if counter == range_i:  # بررسی اگر شمارنده برابر با تعداد مورد نظر بشود
+        if counter == range_i:
             print(C.YELLOW+'Proxy termination')
             break
 ```
